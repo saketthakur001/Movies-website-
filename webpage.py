@@ -25,10 +25,12 @@ def index():
     for data in image_data:
         images_html += f"""
         <div style='display:inline-block; margin: 20px; text-align:center; border: 5px solid #FF0080; padding: 10px; border-radius: 10px; background-color: #333;'>
-            <img src='{data["url"]}' style='max-width:300px; max-height:300px; width:auto; height:auto;'>
-            <p>{data["caption"]}</p>
+            <img src='{data["url"]}' style='max-width: 125px; max-height:300px; width:auto; height:auto;'>
+            <p class='caption'>{data["caption"]}</p>
         </div>
         """
+
+
     html = f"""
     <!DOCTYPE html>
     <html>
@@ -57,10 +59,11 @@ def index():
             img:hover {{
                 box-shadow: 0 0 10px #8cf97b;
             }}
-            p {{
+            .caption {{
                 font-size: 14px;
                 color: #eee;
                 margin: 10px 0;
+                max-width: 125px;
                 word-wrap: break-word;
             }}
             .accent-pink {{
@@ -86,5 +89,3 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-# word-wrap: break-all; to word-wrap: break-word;
