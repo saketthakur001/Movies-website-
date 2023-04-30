@@ -111,4 +111,40 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
+# @app.route("/")
+# def index():
+#     image_data = movies
+#     images_html = "" 
+#     for data in image_data: # get the movie id and rating from the data 
+#         movie_id = data["movieId"]
+#         rating = data["rating"] # create a link to the movieslens site using the movie id 
+#         movie_link = moveis_lens_url + str(movie_id) # add the rating and link to the image 
+#         html  = moveis_lens_url + str(movie_id) # add the rating and link to the image html 
+#         images_html += f""" <div style='display:inline-block; margin: 20px; text-align:center; border: 5px solid #FF0080; padding: 10px; border-radius: 10px; background-color: #333;'> <img src='{data["url"]}' style='max-width: 125px; max-height:300px; width:auto; height:auto;'> <p class='caption'>{data["caption"]}</p> <p class='rating'>Rating: {rating}</p> <a href='{movie_link}' class='link'>More details</a> </div> """
+# import pandas as pd
+
+# df = pd.read_csv('top_movies.csv')
+# df.head()
+
+
+# import pandas as pd
+# # read the csv file
+# df = pd.read_csv('top_movies.csv')
+
+# # make a df get all the title and cover url
+# df = df[['cover url', 'title']]
+
+# # make a list of dicts
+# movies = df.to_dict('records')
+
+# # rename the title to caption and cover url to url
+# for movie in movies:
+#     movie['url'] = movie.pop('cover url')
+#     movie['caption'] = movie.pop('title')
+# movies
+
+# # reposition the each dict 
+# # get link of an image
+# img = "https://m.media-amazon.com/images/M/MV5BMzMyYjg0MGMtMTlkMy00OGFiLWFiNTYtYmFmZWNmMDFlMzkwXkEyXkFqcGdeQXVyNjAwNDUxODI@.jpg"
+# # what is the sapect ratio of the image
+# aspect_ratio = 1.5
