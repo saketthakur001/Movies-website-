@@ -33,79 +33,92 @@ def index():
         movie_link = moveis_lens_url + str(movie_id) # add the rating and link to the image 
         html  = moveis_lens_url + str(movie_id) # add the rating and link to the image html 
         images_html += f""" 
-        <div style='display:inline-block; margin: 20px; text-align:center; border: 5px solid #FF0080; padding: 10px; border-radius: 10px; background-color: #333;'>
-            <img src='{data["url"]}' style='max-width: 125px; max-height:300px; width:auto; height:auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px; background-color: #fff; box-shadow: 0 0 10px #8cf97b; transition: box-shadow 0.3s ease;'>
-            <p class='caption'>{data["caption"]}</p> <p class='rating'>Rating: {rating}</p>
-            <a href='{movie_link}' class='link'>More details</a>
+        <div class='card'>
+            <img src='{data["url"]}' class='card-img'>
+            <div class='card-content'>
+                <h3 class='card-title'>{data["caption"]}</h3>
+                <p class='card-rating'>Rating: {rating}</p>
+                <a href='{movie_link}' class='card-link'>More details</a>
+            </div>
         </div> 
         """
-        
     html = f"""
     <!DOCTYPE html>
     <html>
     <head>
         <title>Image Gallery</title>
         <style>
-            body {{
-                background-color: #ccc;
-                color: #333;
+            * {{
+                box-sizing: border-box;
                 margin: 0;
-                padding: 40px;
+                padding: 0;
+            }}
+            body {{
+                background-color: #f0f0f0;
+                color: #333;
                 font-family: Roboto, sans-serif;
             }}
             h1 {{
                 text-align: center;
-                margin-bottom: 20px;
-                border-bottom: 5px solid #FF0080;
-                padding-bottom: 10px;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                font-size: 36px;
+                font-weight: bold;
             }}
-            img {{
-                border: 1px solid #ddd;
-                border-radius: 4px;
-                padding: 5px;
+            .container {{
+                max-width: 1200px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-gap: 20px;
+            }}
+            .card {{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 background-color: #fff;
-                transition: box-shadow 0.3s ease;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                overflow: hidden;
             }}
-            img:hover {{
-                box-shadow: 0 0 10px #8cf97b;
+            .card-img {{
+                width: 100%;
+                height: auto;
             }}
-            .caption {{
-                font-size: 14px;
-                color: #333;
-                margin: 10px 0;
-                max-width: 125px;
-                word-wrap: break-word;
+            .card-content {{
+                padding: 20px;
+                width: 100%;
             }}
-            .rating {{
-                font-size: 12px;
-                color: #333;
-                margin-bottom: 5px;
+            .card-title {{
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
             }}
-            .link {{
-                font-size: 12px;
-                color: #8cf97b;
-                text-decoration: none;
-                transition: color 0.3s ease;
+            .card-rating {{
+                font-size: 18px;
+                margin-bottom: 10px;
             }}
-            .link:hover {{
-                text-decoration: underline;
-                color:#FF0080;
+            .card-link {{
+                display: inline-block;
+                font-size: 18px;
+                color: #fff;
+                background-color:#FF0080 ;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration:none ;
+                transition: background-color 0.3s ease; 
             }}
-            .accent-pink {{
-                color: #FF0080;
-                padding-bottom: 5px;
-            }}
-            .accent-lime {{
-                color: #8cf97b;
+            .card-link:hover {{
+               background-color:#8cf97b ;
             }}
             
         </style>
     </head>
     <body>
         <h1>Image Gallery</h1>
+        <div class="container">
         {images_html}
-        <p class="accent-pink">Pink accent color</p>
-        <p class="accent-lime">Lime accent color</p>
+        </div>
     </body>
     </html>
     """
