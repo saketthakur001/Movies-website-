@@ -51,7 +51,7 @@ def index():
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Image Gallery</title>
+        <title>Image </title>
         <style>
             * {{
                 box-sizing: border-box;
@@ -136,7 +136,7 @@ def index():
         </style>
     </head>
     <body>
-        <h1>Image Gallery</h1>
+        <h1>MovieLens Top Movies</h1>
         <div class="container">
         {images_html}
         </div>
