@@ -51,7 +51,7 @@ def index():
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Image </title>
+        <title>MoviesLens</title>
         <style>
             * {{
                 box-sizing: border-box;
