@@ -34,12 +34,12 @@ def index():
         html  = moveis_lens_url + str(movie_id) # add the rating and link to the image html 
         images_html += f""" 
         <div style='display:inline-block; margin: 20px; text-align:center; border: 5px solid #FF0080; padding: 10px; border-radius: 10px; background-color: #333;'>
-            <img src='{data["url"]}' style='max-width: 125px; max-height:300px; width:auto; height:auto;'>
+            <img src='{data["url"]}' style='max-width: 125px; max-height:300px; width:auto; height:auto; border: 1px solid #ddd; border-radius: 4px; padding: 5px; background-color: #fff; box-shadow: 0 0 10px #8cf97b; transition: box-shadow 0.3s ease;'>
             <p class='caption'>{data["caption"]}</p> <p class='rating'>Rating: {rating}</p>
             <a href='{movie_link}' class='link'>More details</a>
         </div> 
         """
-
+        
     html = f"""
     <!DOCTYPE html>
     <html>
@@ -47,10 +47,11 @@ def index():
         <title>Image Gallery</title>
         <style>
             body {{
-                background-color: #444;
-                color: #eee;
+                background-color: #ccc;
+                color: #333;
                 margin: 0;
-                padding: 20px;
+                padding: 40px;
+                font-family: Roboto, sans-serif;
             }}
             h1 {{
                 text-align: center;
@@ -70,27 +71,28 @@ def index():
             }}
             .caption {{
                 font-size: 14px;
-                color: #eee;
+                color: #333;
                 margin: 10px 0;
                 max-width: 125px;
                 word-wrap: break-word;
             }}
             .rating {{
                 font-size: 12px;
-                color: #eee;
+                color: #333;
                 margin-bottom: 5px;
             }}
             .link {{
                 font-size: 12px;
                 color: #8cf97b;
                 text-decoration: none;
+                transition: color 0.3s ease;
             }}
             .link:hover {{
                 text-decoration: underline;
+                color:#FF0080;
             }}
             .accent-pink {{
                 color: #FF0080;
-                border-bottom: 2px solid #FF0080;
                 padding-bottom: 5px;
             }}
             .accent-lime {{
@@ -111,4 +113,3 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    
