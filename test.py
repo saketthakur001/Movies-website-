@@ -75,7 +75,7 @@ def index():
             }}
 
             .container {{
-                max-width: 1200px;
+                max-width: 1500px;
                 margin: 0 auto;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -93,10 +93,13 @@ def index():
             }}
 
             .card-img {{
-                width: 300px;
-                height: 450px;
+                width: 200px;
+                height: 300px;
                 object-fit: cover;
-            }}
+                max-width: 300px;
+                max-height: 450px;
+            }}   
+
 
             .card-content {{
                 padding: 20px;
