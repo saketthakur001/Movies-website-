@@ -12,7 +12,7 @@ df = df_top_movies[['cover url', 'title', 'movieId', 'imdbId', 'tmdbId', 'rating
 
 # convert dataframe to list of dicts
 movies = df.to_dict('records')
-
+ 
 # URL for the MovieLens website
 movies_lens_url = 'https://movielens.org/movies/'
 
