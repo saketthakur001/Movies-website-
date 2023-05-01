@@ -72,6 +72,13 @@ def index():
             font-size: 36px;
             font-weight: bold;
             color: #00FFFF;
+            animation: glow 2s infinite;
+        }}
+
+        @keyframes glow {{
+            0% {{ text-shadow: 0 0 10px #00FFFF; }}
+            50% {{ text-shadow: 0 0 20px #00FFFF; }}
+            100% {{ text-shadow: 0 0 10px #00FFFF; }}
         }}
 
         .container {{
@@ -88,7 +95,8 @@ def index():
             align-items: center;
             background-color: #111;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+            box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1), 
+                        0.3em 0.3em 1em rgba(255,255,255,0.3);
             overflow: hidden;
         }}
 
@@ -96,8 +104,12 @@ def index():
             width: 200px;
             height: 300px;
             object-fit: cover;
+            transition: transform .5s ease-in-out;
         }}   
 
+        .card-img:hover {{
+            transform: scale(1.1);
+        }}
 
         .card-content {{
             padding: 20px;
