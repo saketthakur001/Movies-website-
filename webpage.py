@@ -54,78 +54,76 @@ def index():
         <title>MoviesLens</title>
         <style>
             * {{
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-            }}
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }}
 
-            body {{
-                background-color: #000;
-                color: #fff;
-                font-family: 'Orbitron', sans-serif;
-            }}
+        body {{
+            background-color: #000;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+        }}
 
-            h1 {{
-                text-align: center;
-                margin-top: 20px;
-                margin-bottom: 40px;
-                font-size: 36px;
-                font-weight: bold;
-                color: #FF0080;
-            }}
+        h1 {{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            font-size: 36px;
+            font-weight: bold;
+            color: #00FFFF;
+        }}
 
-            .container {{
-                max-width: 1500px;
-                margin: 0 auto;
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                grid-gap: 20px;
-            }}
+        .container {{
+            max-width: 1500px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }}
 
-            .card {{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: #111;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(255, 0, 128, 0.3);
-                overflow: hidden;
-            }}
+        .card {{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #111;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+            overflow: hidden;
+        }}
 
-            .card-img {{
-                width: 200px;
-                height: 300px;
-                object-fit: cover;
-                max-width: 300px;
-                max-height: 450px;
-            }}   
+        .card-img {{
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+        }}   
 
 
-            .card-content {{
-                padding: 20px;
-                width: 100%;
-            }}
+        .card-content {{
+            padding: 20px;
+            width: 100%;
+        }}
 
-            .card-title {{
-                font-size: 24px;
-                font-weight: bold;
-                margin-bottom: 10px;
-                color: #FF0080;
-            }}
+        .card-title {{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #00FFFF;
+        }}
 
-            .card-rating {{
-                font-size: 18px;
-                margin-bottom: 10px;
-                color: #8cf97b;
-            }}
+        .card-rating {{
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #8cf97b;
+        }}
 
-            .card-link {{
-                display: inline-block;
-                font-size: 18px;
-                color: #fff;
-                background-color:#FF0080 ;
-                padding: 10px 20px;
-                border-radius: 5px;
+        .card-link {{
+            display: inline-block;
+            font-size: 18px;
+            color: #fff;
+            background-color:#00FFFF ;
+            padding: 10px 20px;
+            border-radius: 5px;
                 text-decoration:none ;
                 transition: background-color 0.3s ease; 
             }}
