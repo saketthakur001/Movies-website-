@@ -1,3 +1,3 @@
 # customised_recommendation_webapp
+![image](https://user-images.githubusercontent.com/58982512/235493177-a00f46d6-ec7d-4f7b-92c4-f4869398d560.png)
 a flask webapp for customized movie and music recommendations
-![zptbun4488j91](https://user-images.githubusercontent.com/58982512/235492767-16e80b1a-913c-42e0-9809-52da32afdf74.png)
