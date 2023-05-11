@@ -128,11 +128,10 @@ def index():
             margin-bottom: 10px;
             color: #8cf97b;
         }}
-
         .card-link {{
             display: inline-block;
             font-size: 18px;
-            color: #fff;
+            color: black;
             background-color:#00FFFF ;
             padding: 10px 20px;
             border-radius: 5px;

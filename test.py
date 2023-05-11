@@ -12,7 +12,7 @@ df = df_top_movies[['cover url', 'title', 'movieId', 'imdbId', 'tmdbId', 'rating
 
 # convert dataframe to list of dicts
 movies = df.to_dict('records')
-
+ 
 # URL for the MovieLens website
 movies_lens_url = 'https://movielens.org/movies/'
 
@@ -51,81 +51,91 @@ def index():
     <!DOCTYPE html>
     <html>
     <head>
-        <title>MovieLens</title>
+        <title>MoviesLens</title>
         <style>
             * {{
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-            }}
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }}
 
-            body {{
-                background-color: #000;
-                color: #fff;
-                font-family: 'Orbitron', sans-serif;
-            }}
+        body {{
+            background-color: #000;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+        }}
 
-            h1 {{
-                text-align: center;
-                margin-top: 20px;
-                margin-bottom: 40px;
-                font-size: 36px;
-                font-weight: bold;
-                color: #FF0080;
-            }}
+        h1 {{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            font-size: 36px;
+            font-weight: bold;
+            color: #00FFFF;
+            animation: glow 2s infinite;
+        }}
 
-            .container {{
-                max-width: 1500px;
-                margin: 0 auto;
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                grid-gap: 20px;
-            }}
+        @keyframes glow {{
+            0% {{ text-shadow: 0 0 10px #00FFFF; }}
+            50% {{ text-shadow: 0 0 20px #00FFFF; }}
+            100% {{ text-shadow: 0 0 10px #00FFFF; }}
+        }}
 
-            .card {{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: #111;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(255, 0, 128, 0.3);
-                overflow: hidden;
-            }}
+        .container {{
+            max-width: 1500px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }}
 
-            .card-img {{
-                width: 200px;
-                height: 300px;
-                object-fit: cover;
-                max-width: 300px;
-                max-height: 450px;
-            }}   
+        .card {{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #111;
+            border-radius: 10px;
+            box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1), 
+                        0.3em 0.3em 1em rgba(255,255,255,0.3);
+            overflow: hidden;
+        }}
 
+        .card-img {{
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            transition: transform .5s ease-in-out;
+        }}   
 
-            .card-content {{
-                padding: 20px;
-                width: 100%;
-            }}
+        .card-img:hover {{
+            transform: scale(1.1);
+        }}
 
-            .card-title {{
-                font-size: 24px;
-                font-weight: bold;
-                margin-bottom: 10px;
-                color: #FF0080;
-            }}
+        .card-content {{
+            padding: 20px;
+            width: 100%;
+        }}
 
-            .card-rating {{
-                font-size: 18px;
-                margin-bottom: 10px;
-                color: #8cf97b;
-            }}
+        .card-title {{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #00FFFF;
+        }}
 
-            .card-link {{
-                display: inline-block;
-                font-size: 18px;
-                color: #fff;
-                background-color:#FF0080 ;
-                padding: 10px 20px;
-                border-radius: 5px;
+        .card-rating {{
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #8cf97b;
+        }}
+
+        .card-link {{
+            display: inline-block;
+            font-size: 18px;
+            color: #fff;
+            background-color:#00FFFF ;
+            padding: 10px 20px;
+            border-radius: 5px;
                 text-decoration:none ;
                 transition: background-color 0.3s ease; 
             }}
@@ -136,7 +146,7 @@ def index():
         </style>
     </head>
     <body>
-        <h1>Image Gallery</h1>
+        <h1>MovieLens Top Movies</h1>
         <div class="container">
         {images_html}
         </div>
