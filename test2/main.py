@@ -15,19 +15,14 @@ with open('top_movies.csv') as f:
     # make a list of dicts with required columns
     movies = [{'url': row['cover url'], 'caption': row['title'], 'movieId': row['movieId'], 'rating': row['rating']} for row in reader]
 
-def similar(a, b):
-    return SequenceMatcher(None, a, b).ratio()
-
 @app.route("/search")
 def search():
-    # get the user query from the URL parameters
-    query = request.args.get("query")
-    # filter the movies list by matching the query with the title
-    results = [movie for movie in movies if query.lower() in movie["caption"].lower()]
-    # sort the results by similarity score
-    results = sorted(results, key=lambda x: similar(x["caption"].lower(), query.lower()), reverse=True)
-    # pass the results to the template
-    return render_template('search.html', results=results, query=query, app=app)
+ # get the user query from the URL parameters
+ query = request.args.get("query")
+ # filter the movies list by matching the query with the title
+ results = [movie for movie in movies if query.lower() in movie["caption"].lower()]
+ # return the results to the template
+ return render_template("search.html", results=results, query=query, app=app)
 
 @app.route("/")
 def index():
