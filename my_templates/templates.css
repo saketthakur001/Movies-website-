@@ -36,40 +36,6 @@ h1 {
     grid-gap: 20px;
 }
 
-.search-box {
-    position: relative;
-    width: 200px;
-    margin: 0 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-box input {
-    width: 100%;
-    padding: 5px 10px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-}
-
-.search-box button {
-    float: right;
-    padding: 5px 10px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background-color: #00FFFF;
-    color: #fff;
-}
-
-.search-form {
-    text-align:left; /* aligns the form to the left */
-    margin-left :20px; /* adds some space on the left */
-    margin-bottom :40px; /* adds some space below */
-   }
-   
-
 .card {
     display: flex;
     flex-direction: column;
