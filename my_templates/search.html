@@ -8,6 +8,13 @@
 
 <body>
   <h1>Search Results for "{{ query }}"</h1>
+  
+  <!-- search box -->
+  <form action="/search" method="get" class="search-form">
+    <input type="text" name="query" placeholder="Enter movie title">
+    <button type="submit">Search</button>
+  </form>
+
   {% if results %}
   <div class="container">
     {% for movie in results %}
@@ -16,7 +23,7 @@
       <div class='card-content'>
         <h3 class='card-title'>{{ movie["caption"] }}</h3>
         <p class='card-rating'>Rating: {{ movie["rating"] }}</p>
-        <a href='{{ app.config["MOVIES_LENS_URL"] }}{{ movie["movieId"] }}' class='card-link' target='_parent'>More
+        <a href='{{ "https://movielens.org/movies/"}}{{ movie["movieId"] }}' class='card-link' target='_parent'>More details</a>
           details</a>
       </div>
     </div>
