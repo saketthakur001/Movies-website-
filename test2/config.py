@@ -2,7 +2,8 @@
 
 class Config:
     # common configuration values
-    SECRET_KEY = "some-secret-key"
+    # SECRET_KEY = "some-secret-key"
+    MOVIES_LENS_URL = "https://movielens.org/movies/"
     DEBUG = False
 
 class DevelopmentConfig(Config):
