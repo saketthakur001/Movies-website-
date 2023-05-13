@@ -36,7 +36,7 @@ h1 {
     grid-gap: 20px;
 } */
 .container {
-    max-width: 1200px; /* reduced the maximum width */
+    max-width: 1260px; /* reduced the maximum width */
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 250px)); /* reduced the maximum width of each grid column */
@@ -60,7 +60,6 @@ h1 {
  }
 }
 
-
 .search-form {
     position: relative;
     width: 200px;
@@ -69,17 +68,43 @@ h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
     float: right;
-}
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* added a subtle shadow */
+    transition: box-shadow 0.3s ease; /* added a transition for the shadow */
+    background-image: linear-gradient(to right, #00FFFF, #8cf97b); /* added a gradient background */
+    background-size: 200%; /* increased the background size */
+    background-position: right; /* moved the background position */
+    border-image: url('https://i.imgur.com/9kXy7lT.png') 30; /* added a border image */
+    border-image-slice: 30; /* sliced the border image */
+    border-image-width: 10px; /* increased the border image width */
+    filter: brightness(0.8) contrast(0.8); /* reduced the brightness and contrast */
+    opacity: 0.9; /* reduced the opacity */
+   }
+   
+   .search-form:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* increased the shadow on hover */
+    background-position: left; /* moved the background position on hover */
+    filter: brightness(1) contrast(1); transition: 0.5s ease; /* changed the filter effects on hover */
+    opacity: 1; /* changed the opacity on hover */
+   }
 
-.search-form input {
+   
+   .search-form input {
     width: 100%;
     padding: 5px 10px;
     border: none;
     outline: none;
     font-size: 16px;
-}
-
-.search-form button {
+   }
+   
+   .search-form input:focus {
+    border-bottom: 2px solid #00FFFF; /* added a bottom border on focus */
+   }
+   
+   .search-form input::placeholder {
+    color: #999; /* changed the color of the placeholder text */
+   }
+   
+   .search-form button {
     float: right;
     padding: 5px 10px;
     border: none;
@@ -87,8 +112,30 @@ h1 {
     font-size: 16px;
     background-color: #00FFFF;
     color: #fff;
-}
-
+    box-shadow: inset -2px -2px 4px rgba(255,255,255,0.2); /* added an inner shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* added transitions for the shadow and the transform */
+    background-image: linear-gradient(to right, #00FFFF, #8cf97b); /* added a gradient background */
+    background-size: 200%; /* increased the background size */
+    background-position: right; /* moved the background position */
+    border-image: url('https://i.imgur.com/9kXy7lT.png') 30; /* added a border image */
+    border-image-slice: 30; /* sliced the border image */
+    border-image-width: 10px; /* increased the border image width */
+    filter: brightness(0.8) contrast(0.8); /* reduced the brightness and contrast */
+    opacity: 0.9; /* reduced the opacity */
+   }
+   
+   .search-form button:hover {
+    box-shadow: inset -4px -4px 8px rgba(255,255,255,0.4);transition: box-shadow 1s ease; /* increased the inner shadow on hover */
+    transform: rotate(-5deg); /* rotated the button slightly on hover */
+    background-position: left; /* moved the background position on hover */
+    filter: brightness(1) contrast(1); /* changed the filter effects on hover */
+    opacity: 1; /* changed the opacity on hover */
+   }
+   
+   .search-form button:active {
+    box-shadow: inset -6px -6px 12px rgba(255,255,255,0.6); /* increased the inner shadow on click */
+    transform: rotate(-10deg); /* rotated the button more on click */
+   }
    
 .card {
     display: flex;
@@ -159,4 +206,3 @@ h1 {
     height: 75px; /* reduced the height of the image for very small screens */
     }
    }
-   
