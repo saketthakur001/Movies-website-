@@ -27,19 +27,13 @@ h1 {
     50% { text-shadow: 0 0 20px #00FFFF; }
     100% { text-shadow: 0 0 10px #00FFFF; }
 }
-/* 
+
 .container {
-    max-width: 1500px;
-    margin: 0 auto;
+    /* max-width: 1300px; reduced the maximum width */
+    margin-top: 150px;
+    /* margin: auto; */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-} */
-.container {
-    max-width: 1260px; /* reduced the maximum width */
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 250px)); /* reduced the maximum width of each grid column */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 150px)); /* reduced the maximum width of each grid column */
     grid-gap: 20px;
     justify-content: center; /* centers the items horizontally */
     align-items: center; /* centers the items vertically */
@@ -165,14 +159,14 @@ h1 {
    }
    
    .card-title {
-    font-size: 24px;
+    font-size: 17px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #00FFFF;
    }
    
    .card-rating {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 10px;
     color: #8cf97b;
    }
