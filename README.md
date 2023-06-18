@@ -1,13 +1,6 @@
 # Movies-website
 ![image](https://github.com/saketthakur001/Movies-website-/assets/58982512/9bae506a-1251-41e1-965e-69799b6ed43f)
-This project is a web application for customized movie and music recommendations. It uses Flask, Pandas, and Vercel to create a user-friendly interface that allows users to search for movies and songs based on their preferences.
-
-## Features
-
-- Movie recommendations based on genres, ratings, and popularity
-- Music recommendations based on artists, albums, and songs
-- Dark mode option for better user experience
-- Responsive design that adapts to different screen sizes
+This project is a web application for customized movie and music recommendations. It uses Flask, Pandas, and Vercel to create a user-friendly interface that allows users to search for movies and songs.
 
 ## Installation
 
