@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="RecoSpot is a spotify playlist manager site that helps you discover new music and create personalized playlists.">
+  <meta name="description" content="RecoSpot is a Spotify playlist manager site that helps you discover new music and create personalized playlists.">
   <meta name="keywords" content="spotify, music, playlist, recommendation">
   <meta name="author" content="Your Name">
   <title>RecoSpot</title>
@@ -22,7 +22,7 @@
       color: #fff;
     }
 
-    .title { /* Added this class */
+    .title {
       margin: 1rem;
       padding: 0.5rem;
       text-align: center;
@@ -48,8 +48,8 @@
     }
 
     nav ul li {
-      display: inline-block; /* Changed from inline */
-      margin-right: 1rem; /* Changed from 20px */
+      display: inline-block;
+      margin-right: 1rem;
     }
 
     nav ul li a {
@@ -57,25 +57,25 @@
       text-decoration: none;
     }
 
-    main { /* Added this element */
-      max-width: 1200px; /* Added this property */
-      margin: 0 auto; /* Added this property */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     section {
-      padding: 1rem; /* Changed from 20px */
+      padding: 1rem;
       background-color: #333;
-      margin-bottom: 1rem; /* Changed from 20px */
+      margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 1.5rem; /* Changed from 20px */
+      font-size: 1.5rem;
       color: #1DB954;
     }
 
     .track {
-      display: inline-block; /* Changed from inline */
-      margin-right: 1rem; /* Changed from 20px */
+      display: inline-block;
+      margin-right: 1rem;
     }
 
     .track img {
@@ -85,80 +85,84 @@
 
     .track h3,
     .track p {
-      margin: 0.5rem; /* Changed from 0 */
+      margin: 0.5rem;
       color: #fff;
     }
 
     footer {
       background-color: #333;
-      padding: 1rem; /* Changed from 20px */
+      padding: 1rem;
       text-align: center;
       color: #fff;
     }
 
     .button {
       display: inline-block;
-      padding: 0.5rem; /* Changed from 10px */
+      padding: 0.5rem;
       background-color: #1DB954;
-      color: #000; 
+      color: #000;
       text-decoration: none;
       border-radius: 5px;
-
-       /* Added these properties for hover effect */
-       transition-duration: 0.3s; 
-       transform-origin: center center;
-
-       /* Added these properties for media query */
-       width: calc(25% - (4 * (1rem / (4 -1)))); 
-       text-align:center;
-
-       /* Added this property for menu space */
-       margin-left: 10%;
+      transition-duration: 0.3s;
+      transform-origin: center center;
     }
 
-    /* Added this media query for smaller screens */
     @media screen and (max-width: 768px) {
+      /* Added a flexbox layout for the nav menu to align it to the left and wrap it if needed */
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
       nav ul li {
-        display: block; /* Changed from inline-block */
-        margin-bottom: 0.5rem; /* Added this property */
+        display: block;
+        margin-bottom: 0.5rem;
+        margin-left: -10%;
+      }
+
+      /* Added a grid layout for the tracks to make them responsive and fit the screen width */
+      section#recommendations {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 1rem;
       }
 
       .track {
-        display: block; /* Changed from inline-block */
-        margin-bottom: 0.5rem; /* Added this property */
+        display: block;
+        margin-bottom: 0.5rem;
       }
 
       .button {
-        width: 80%; /* Changed from calc(25% - (4 * (1rem / (4 -1)))) */
+        width: 80%;
       }
     }
 
-    /* Added this media query for larger screens */
     @media screen and (min-width: 1200px) {
       main {
-        display: flex; /* Added this property */
+        display: flex;
       }
 
-      aside { /* Added this element for menu space */
-        width: 20%; /* Added this property */
-        background-color: #333; /* Added this property */
-        padding: 1rem; /* Added this property */
-        margin-right: 1rem; /* Added this property */
+      aside {
+        width: 20%;
+        background-color: #333;
+        padding: 1rem;
+        margin-right: 1rem;
       }
 
       section {
-        width: 80%; /* Added this property */
+        width: 80%;
       }
 
       .track {
-        width: calc(25% - (4 * (1rem / (4 -1)))); /* Added this property */
+        width: calc(25% - (4 * (1rem / (4 - 1))));
       }
     }
 
-    /* Added these selectors for hover effect */
     nav ul li a:hover,
     .button:hover {
-      transform: scale(1.1); /* Added this property */
+      transform: scale(1.1);
     }
   </style>
 </head>
