@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="RecoSpot is a spotify playlist manager site that helps you discover new music and create personalized playlists.">
+  <meta name="keywords" content="spotify, music, playlist, recommendation">
+  <meta name="author" content="Your Name">
   <title>RecoSpot</title>
   <style>
     /* CSS Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #000;
@@ -11,20 +23,20 @@
     }
 
     .title { /* Added this class */
-      margin: 20px;
-      padding: 10px;
+      margin: 1rem;
+      padding: 0.5rem;
       text-align: center;
     }
 
     header {
       background-color: #333;
-      padding: 20px;
+      padding: 1rem;
       border-radius: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 2rem;
       margin: 0;
       color: #1DB954;
     }
@@ -36,8 +48,8 @@
     }
 
     nav ul li {
-      display: inline;
-      margin-right: 20px;
+      display: inline-block; /* Changed from inline */
+      margin-right: 1rem; /* Changed from 20px */
     }
 
     nav ul li a {
@@ -45,20 +57,25 @@
       text-decoration: none;
     }
 
+    main { /* Added this element */
+      max-width: 1200px; /* Added this property */
+      margin: 0 auto; /* Added this property */
+    }
+
     section {
-      padding: 20px;
+      padding: 1rem; /* Changed from 20px */
       background-color: #333;
-      margin-bottom: 20px;
+      margin-bottom: 1rem; /* Changed from 20px */
     }
 
     h2 {
-      font-size: 20px;
+      font-size: 1.5rem; /* Changed from 20px */
       color: #1DB954;
     }
 
     .track {
-      display: inline-block;
-      margin-right: 20px;
+      display: inline-block; /* Changed from inline */
+      margin-right: 1rem; /* Changed from 20px */
     }
 
     .track img {
@@ -68,24 +85,80 @@
 
     .track h3,
     .track p {
-      margin: 0;
+      margin: 0.5rem; /* Changed from 0 */
       color: #fff;
     }
 
     footer {
       background-color: #333;
-      padding: 20px;
+      padding: 1rem; /* Changed from 20px */
       text-align: center;
       color: #fff;
     }
 
     .button {
       display: inline-block;
-      padding: 10px 20px;
+      padding: 0.5rem; /* Changed from 10px */
       background-color: #1DB954;
       color: #000; 
       text-decoration: none;
       border-radius: 5px;
+
+       /* Added these properties for hover effect */
+       transition-duration: 0.3s; 
+       transform-origin: center center;
+
+       /* Added these properties for media query */
+       width: calc(25% - (4 * (1rem / (4 -1)))); 
+       text-align:center;
+
+       /* Added this property for menu space */
+       margin-left: 10%;
+    }
+
+    /* Added this media query for smaller screens */
+    @media screen and (max-width: 768px) {
+      nav ul li {
+        display: block; /* Changed from inline-block */
+        margin-bottom: 0.5rem; /* Added this property */
+      }
+
+      .track {
+        display: block; /* Changed from inline-block */
+        margin-bottom: 0.5rem; /* Added this property */
+      }
+
+      .button {
+        width: 80%; /* Changed from calc(25% - (4 * (1rem / (4 -1)))) */
+      }
+    }
+
+    /* Added this media query for larger screens */
+    @media screen and (min-width: 1200px) {
+      main {
+        display: flex; /* Added this property */
+      }
+
+      aside { /* Added this element for menu space */
+        width: 20%; /* Added this property */
+        background-color: #333; /* Added this property */
+        padding: 1rem; /* Added this property */
+        margin-right: 1rem; /* Added this property */
+      }
+
+      section {
+        width: 80%; /* Added this property */
+      }
+
+      .track {
+        width: calc(25% - (4 * (1rem / (4 -1)))); /* Added this property */
+      }
+    }
+
+    /* Added these selectors for hover effect */
+    nav ul li a:hover,
+    .button:hover {
+      transform: scale(1.1); /* Added this property */
     }
   </style>
 </head>
@@ -105,22 +178,27 @@
     </nav>
   </header>
 
-  <section id="recommendations">
-    <h2>Recommended Tracks</h2>
-    <div class="track">
-      <img src="track1.jpg" alt="Track 1">
-      <h3>Track 1</h3>
-      <p>Artist 1</p>
-    </div>
-    <div class="track">
-      <img src="track2.jpg" alt="Track 2">
-      <h3>Track 2</h3>
-      <p>Artist 2</p>
-    </div>
-    <!-- More recommended tracks... -->
-  </section>
+  <main> <!-- Added this element -->
+    <aside> <!-- Added this element for menu space -->
+      <!-- You can add some content here for your menu -->
+    </aside>
+    <section id="recommendations">
+      <h2>Recommended Tracks</h2>
+      <div class="track">
+        <img src="track1.jpg" alt="Track 1">
+        <h3>Track 1</h3>
+        <p>Artist 1</p>
+      </div>
+      <div class="track">
+        <img src="track2.jpg" alt="Track 2">
+        <h3>Track 2</h3>
+        <p>Artist 2</p>
+      </div>
+      <!-- More recommended tracks... -->
+    </section>
 
-  <!-- Other sections of your webpage... -->
+    <!-- Other sections of your webpage... -->
+  </main>
 
   <footer>
     <p>© 2023 RecoSpot. All rights reserved.</p>
