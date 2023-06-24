@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="RecoSpot is a Spotify playlist manager site that helps you discover new music and create personalized playlists.">
+  <meta name="description" content="RecoSpot is a spotify playlist manager site that helps you discover new music and create personalized playlists.">
   <meta name="keywords" content="spotify, music, playlist, recommendation">
   <meta name="author" content="Your Name">
   <title>RecoSpot</title>
@@ -108,25 +108,10 @@
     }
 
     @media screen and (max-width: 768px) {
-      /* Added a flexbox layout for the nav menu to align it to the left and wrap it if needed */
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
       nav ul li {
         display: block;
         margin-bottom: 0.5rem;
         margin-left: -10%;
-      }
-
-      /* Added a grid layout for the tracks to make them responsive and fit the screen width */
-      section#recommendations {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-gap: 1rem;
       }
 
       .track {
@@ -156,7 +141,7 @@
       }
 
       .track {
-        width: calc(25% - (4 * (1rem / (4 - 1))));
+        width: calc(25% - (4 * (1rem / (4 -1))));
       }
     }
 
@@ -208,9 +193,5 @@
 
     <!-- Other sections of your webpage... -->
   </main>
-
-  <footer>
-    <p>© 2023 RecoSpot. All rights reserved.</p>
-  </footer>
 </body>
 </html>
